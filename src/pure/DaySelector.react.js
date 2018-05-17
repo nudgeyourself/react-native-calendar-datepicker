@@ -172,7 +172,7 @@ export default class DaySelector extends Component {
       // Add it to the result here.
       iterator.add(1, 'day');
     }
-    LayoutAnimation.easeInEaseOut();
+    // LayoutAnimation.easeInEaseOut();
     return result;
   };
 
