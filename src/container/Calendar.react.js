@@ -73,6 +73,7 @@ type Props = {
   yearMaxTintColor?: string,
   yearSlider?: Slider.propTypes.style,
   yearText?: Text.propTypes.style,
+  disableMonthButton: boolean,
 };
 type State = {
   stage: Stage,
@@ -174,6 +175,7 @@ export default class Calendar extends Component {
               activeOpacity={this.state.stage !== YEAR_SELECTOR ? 0.8 : 1}
               underlayColor={barStyle ? barStyle.backgroundColor : 'transparent'}
               onPress={this._previousStage}
+              disabled={disableMonthButton}
               style={{ alignSelf: 'center' }}
             >
               <Text style={this.props.barText}>
@@ -254,6 +256,7 @@ Calendar.defaultProps = {
   startStage: DAY_SELECTOR,
   finalStage: DAY_SELECTOR,
   showArrows: true,
+  disableMonthButton: false,
 };
 
 const styles = StyleSheet.create({
