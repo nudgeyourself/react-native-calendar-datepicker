@@ -175,7 +175,7 @@ export default class Calendar extends Component {
               activeOpacity={this.state.stage !== YEAR_SELECTOR ? 0.8 : 1}
               underlayColor={barStyle ? barStyle.backgroundColor : 'transparent'}
               onPress={this._previousStage}
-              disabled={disableMonthButton}
+              disabled={this.props.disableMonthButton}
               style={{ alignSelf: 'center' }}
             >
               <Text style={this.props.barText}>
